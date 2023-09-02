@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за оплату</title>
+    <!-- Здесь вы можете добавить стили, скрипты и другие ресурсы, соответствующие вашему дизайну -->
+</head>
+<body>
+    <div style="text-align: center; padding: 20px;">
+        <h1>Спасибо за оплату!</h1>
+        <p>Ваш платеж успешно обработан.</p>
+        <!-- Здесь можете добавить дополнительную информацию о заказе или другие детали -->
+        <a href="myapp://order-success?id=12345">Вернуться в приложение</a>
+        <!-- Замените ссылку на пример Deep Linking на свою собственную -->
+    </div>
+</body>
+</html>
