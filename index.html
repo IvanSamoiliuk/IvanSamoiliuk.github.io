@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Спасибо за оплату</title>
-    <!-- Здесь вы можете добавить стили, скрипты и другие ресурсы, соответствующие вашему дизайну -->
+    <title>Результат оплаты</title>
 </head>
 <body>
     <div style="text-align: center; padding: 20px;">
-        <h1>Спасибо за оплату!</h1>
-        <p>Ваш платеж успешно обработан.</p>
-        <!-- Здесь можете добавить дополнительную информацию о заказе или другие детали -->
+        <h1>Данные об оплате</h1>
+        
+        <!-- Используем JavaScript для вывода данных -->
+        <script>
+            // Получаем URL-параметры
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Функция для вывода данных на страницу
+            function displayPaymentData(key) {
+                const value = urlParams.get(key);
+                if (value) {
+                    const dataDiv = document.createElement('div');
+                    dataDiv.innerHTML = `<p><strong>${key}:</strong> ${value}</p>`;
+                    document.body.appendChild(dataDiv);
+                }
+            }
+
+            // Выводим все доступные параметры
+            displayPaymentData('id'); // Пример: вывод идентификатора заказа
+            displayPaymentData('amount'); // Пример: вывод суммы оплаты
+            // Добавьте здесь другие параметры, которые вы хотите отобразить
+
+        </script>
+        
+        <!-- Ссылка для возврата в приложение -->
         <a href="fondy://order-success?id=12345">Вернуться в приложение</a>
         <!-- Замените ссылку на пример Deep Linking на свою собственную -->
     </div>
